@@ -34,3 +34,7 @@ footer {
         color: var(--color-white);
     }
 }
+
+.creator-link {
+    text-align: center;
+}
