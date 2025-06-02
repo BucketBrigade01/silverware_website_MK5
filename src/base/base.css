@@ -1,0 +1,35 @@
+h1 {
+    font-size: var(--font-600);
+    color: var(--color-brown);
+    font-family: var(--font-primary);
+}
+
+h2 {
+    font-size: var(--font-500);
+    color: var(--color-brown);
+    font-family: var(--font-primary);
+}
+
+h3 {
+    font-size: var(--font-400);
+    color: var(--color-brown);
+    font-family: var(--font-primary);
+}
+
+h4 {
+    font-size: var(--font-300);
+    color: var(--color-brown);
+    font-family: var(--font-primary);
+}
+
+p {
+    font-size: var(--font-100);
+}
+
+header {
+    background-color: var(--color-white);
+}
+
+body {
+    background-color: var(--color-white);
+}

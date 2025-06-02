@@ -1,0 +1,38 @@
+.contact-main {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, var(--color-white), var(--color-brown));
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    & h2 {
+        font-family: var(--font-brand);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-form-item {
+    border: none;
+    padding: 1rem;
+    margin: 1ch;
+    width: min(50rem, 90%);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-brown);
+}
+
+.contact-form-item:focus {
+    box-shadow: 5px 5px 40px var(--color-white);
+    outline: none;
+}

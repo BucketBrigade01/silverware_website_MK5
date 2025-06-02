@@ -1,0 +1,20 @@
+.poster-items {
+  columns: 3 250px; /* 3 columns, each at least 250px wide */
+  column-gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.poster-items img {
+  width: 100%;
+  margin-bottom: 2rem;
+  break-inside: avoid; /* Prevent images from breaking across columns */
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.poster-items img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}

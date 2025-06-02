@@ -1,0 +1,56 @@
+.clean-button {
+    outline: none;
+    background-color: var(--color-white);
+    color: var(--color-brown);
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    font-weight: 800;
+    font-size: var(--font-100);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.clean-button:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.ticket-button {
+    width: 20rem;
+    background-color: var(--color-orange);
+    border: none;
+    padding: 1rem;
+    color: var(--color-white);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    @media screen and (width < 500px) {
+        width: 20ch;
+    }
+}
+
+.ticket-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.no-ticket-button {
+     width: 20rem;
+    border: none;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-radius: 5rem;
+    color: var(--color-brown);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    @media screen and (width < 500px) {
+        width: 20ch;
+    }
+}

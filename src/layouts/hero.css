@@ -1,0 +1,137 @@
+.hero-main {
+    background: linear-gradient(to bottom, var(--color-blue), var(--color-white));
+    position: relative;
+    overflow: hidden;
+
+    & .spinning-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 40rem;
+        z-index: 1;
+        animation: spin 30s linear infinite;
+    }
+
+    & .top-clouds {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        animation: move-top-clouds 120s linear infinite;
+    }
+
+    & .bottom-clouds {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+        animation: move-bottom-clouds 120s linear infinite;
+    }
+
+}
+
+.hero-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0;
+    gap: 1rem;
+    text-align: center;
+
+    & .hero-logo {
+        width: 40rem;
+        z-index: 2;
+    }
+
+    & p {
+        font-size: var(--font-100);
+        font-weight: 800;
+        letter-spacing: 0.5rem;
+        max-width: 80ch;
+    }
+
+    @media screen and (width < 500px) {
+        padding: 5rem 0;
+
+        & p {
+            font-size: var(--font-25);
+            letter-spacing: 0.25rem;
+        }
+    }
+}
+
+.album-showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+
+    & .old-album {
+        object-fit: contain;
+        width: 10rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        position: relative; 
+        z-index: 2; 
+    }
+
+    & .old-album:hover {
+        transform: scale(1.5);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+        z-index: 10; 
+    }
+
+    & .new-album {
+        object-fit: contain;
+        width: 17rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        z-index: 3;
+    }
+
+    & .new-album:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+        z-index: 10; 
+    }
+
+    @media screen and (width < 500px) {
+        & .old-album {
+            width: 5rem;
+        }
+        & .new-album {
+            width: 7rem;
+        }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-top-clouds {
+    from {
+        transform: translateX(calc(100vw + 100%)); 
+    }
+    to {
+        transform: translateX(calc(-100vw - 100%));
+    }
+}
+
+@keyframes move-bottom-clouds {
+    from {
+        transform: translateX(calc(-100vw - 100%));
+    }
+    to {
+        transform: translateX(calc(100vw + 100%));
+    }
+}

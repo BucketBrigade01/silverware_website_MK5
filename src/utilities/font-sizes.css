@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Providence-Sans';
+  src: url('../assets/fonts/Providence-Sans.otf') format('woff2'),
+       url('../assets/fonts/Providence-Sans.otf') format('woff'),
+       url('../assets/fonts/Providence-Sans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SuperFrog-Yqy1q';
+  src: url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('woff2'),
+       url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('woff'),
+       url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-25: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --font-50: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --font-100: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --font-200: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --font-300: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --font-400: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --font-500: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --font-600: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+  --font-primary: 'Providence-Sans', system-ui, sans-serif; 
+  --font-brand: 'SuperFrog-Yqy1q', system-ui, sans-serif;
+
+  --color-red: #df4545;
+  --color-pink: #eb9191;
+  --color-yellow: #FADFA1;
+  --color-white: #ebdbcc;
+  --color-blue: #7EACB5;
+  --color-green: #73b895;
+  --color-brown: #2e1c18;
+  --color-orange: #eb7e36;
+  --color-light-brown: #c78576;
+  --color-gray-brown: #2e221e;
+}
