@@ -1,9 +1,9 @@
 ---
-title: Herman's Upstairs 
-description: final goodbye show for Herman's upstairs 
+title: Glass House Show
+description: First show put on by this is glass house
 posterImage: /assets/posters/poster4.webp
-altText: Silverware Herman's upstairs final goodbye show poster
+altText: Glass House Show Poster
 date: 2025-03-21
-tags: 
-    - poster
+tags:
+  - poster
 ---
