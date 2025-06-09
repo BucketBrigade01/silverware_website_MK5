@@ -15,5 +15,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Address", name: "address", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Ticket Link", name: "ticketLinks", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list", default:['show']}
+      - {label: "Ticket Link", name: "ticketLink", widget: "string", required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default:
+          - "show"
