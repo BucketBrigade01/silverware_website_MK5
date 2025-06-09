@@ -1,0 +1,123 @@
+---
+title: Silverware Band | Official Website
+layout: 'base.njk'
+---
+<!-- NAVBAR -->
+<header id="navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-welcome">
+            <h4>WELCOME</h4>
+        </div>
+        <hr class="top-hr1">
+        <hr class="top-hr2">
+        <hr class="top-hr3">
+        <div class="navber-main">
+            <img class="left-logo" src="assets/art/silverware_banner_logo.png" alt="">
+            <div class="navbar-items">
+                <a href="#hero"><button class="clean-button">MUSIC</button></a>
+                <a href="#ticket"><button class="clean-button">TICKETS</button></a>
+                <a href="#about"><button class="clean-button">ABOUT</button></a>
+                <a href="#contact"><button class="clean-button">CONTACT</button></a>
+            </div>
+        </div>
+        <img class="center-logo" src="assets/art/member_banner_center.png" alt="">
+    </div>
+    <hr class="bottom-hr1">
+    <hr class="bottom-hr2">
+    <hr class="bottom-hr3">
+</header>
+
+<!-- HERO -->
+<div id="hero" class="hero-main">
+    <div class="wrapper">
+        <div class="hero-items">
+            <img class="hero-logo" src="assets/art/silverware_banner_logo.png" alt="">
+            <p>CHECKOUT OUT NEWEST ALBUM DAYDREAM</p>
+            <div class="album-showcase">
+                <div class="album-showcase-item">
+                    <a href="https://open.spotify.com/album/3GpbVmCFgH4UqiHekUDDf0?si=_-cXKNcoTeC4DVSi9Icj5Q" target="_blank"></a>><img class="old-album" src="assets/art/silverware_hero_album2.webp" alt=""></a>
+                </div>
+                <div class="album-showcase-item">
+                    <a href="https://open.spotify.com/album/66zXicdAIXLbCKLQoHyYc8?si=2-yj5xWFT7OigrlKxoVm9w" target="_blank"></a>><img class="new-album" src="assets/art/silverware_hero_album.webp" alt=""></a>
+                </div>
+                <div class="album-showcase-item">
+                    <a href="https://open.spotify.com/album/3JM1hm8Tnn439IPmvzJUYY?si=gRVzazV6TaO_9edccZwoDA" target="_blank"><img class="old-album" src="assets/art/silverware_hero_album3.webp" alt=""></a>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <img class="spinning-image" src="assets/art/silverware_hero_flowers.png" alt="">
+    <img class="bottom-clouds" src="assets/art/silverare_clouds_fluffy.png" alt="">
+    <img class="top-clouds" src="assets/art/silverware_clouds.png" alt="">
+</div>
+
+<!-- TICKETS -->
+<div id="ticket" class="tickets-main">
+    <div class="wrapper">
+        <div class="ticket-items">
+            <h1>COME SEE US PLAY</h1>
+            <div id="show-container">
+
+                {% for show in collections.show %}
+                     <div class="show-content">
+                        <div>
+                            <h4 class="show-title">{{show.data.title}}</h3>
+                            <p class="show-date">{{show.date | showDate}}</p>
+                        </div>
+                        <p class="show-address">{{show.data.address}}</p>
+                        {% if show.data.ticketLink %}
+                            <a  href="${show.ticketLink}" target="_blank" rel="noopener">
+                                <button class="ticket-button" >
+                                    Get Tickets
+                                </button>
+                            </a>
+                        {% else %}
+                            <a  href="${show.ticketLink}" target="_blank" rel="noopener">
+                                <button class="no-ticket-button" >
+                                    Tix Not Available
+                                </button>
+                            </a>
+                        {% endif %}
+                       
+                    </div>
+                    <hr class="ticket-sep">
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="about-main">
+    <div class="wrapper">
+        <div class="about-items">
+            <div class="about-image">
+                <img src="assets/images/group_pic.webp" alt="">
+            </div>
+            <div class="about-blurb">
+                <h2>ABOUT THE BAND</h2>
+                <p>Silverware is a five piece band based out of Victoria BC. Members include Huckleberry Flett on lead vocals & guitar, Cole Davis on bass, Ava Creed on drums, Jake Styles on lead guitar, and Rhi Gordon-Smith on synth. If you want to learn more about the band, or checkout the gear we use, click below!</p>
+                <a href="about?about.html"><button class="ticket-button">GET TO KNOW US</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+    <div id="contact" class="contact-main">
+    <div class="wrapper">
+        <div class="contact-items">
+            <h2>GET IN TOUCH</h2>
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="4e12db52-7887-4473-9e82-ed53a88fcb1f">
+                <input class="contact-form-item" type="text" name="name" placeholder="Name" required>
+                <input class="contact-form-item" type="email" name="email" placeholder="Email" required>
+                <input class="contact-form-item" type="text" name="phone" placeholder="Phone Number" required>
+                <textarea class="contact-form-item" name="message" rows="4" placeholder="Whats up?"></textarea> 
+                <button class="ticket-button" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    </div>
+

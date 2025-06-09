@@ -1,0 +1,34 @@
+{
+  "shows": [
+    {
+      "date": "June 13",
+      "address": "TBA",
+      "title": "House Show",
+      "ticketLink": ""
+    },
+    {
+      "date": "June 20",
+      "address": "2960 Bridge St", 
+      "title": "Bangers Burgers",
+      "ticketLink": ""
+    },
+    {
+      "date": "July 8",
+      "address": "777 Fort St", 
+      "title": "Fort Tectoria",
+      "ticketLink": ""
+    },
+    {
+      "date": "August 1",
+      "address": "33 Victoria Crescent", 
+      "title": "Sound Heritage",
+      "ticketLink": ""
+    },
+    {
+      "date": "August 17",
+      "address": "Providence Farm, 1846 Tzouhalem Rd", 
+      "title": "Special Woodstock",
+      "ticketLink": ""
+    }
+  ]
+}

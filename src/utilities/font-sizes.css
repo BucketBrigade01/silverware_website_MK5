@@ -4,9 +4,9 @@ html {
 
 @font-face {
   font-family: 'Providence-Sans';
-  src: url('../assets/fonts/Providence-Sans.otf') format('woff2'),
-       url('../assets/fonts/Providence-Sans.otf') format('woff'),
-       url('../assets/fonts/Providence-Sans.otf') format('opentype');
+  src: url('/assets/fonts/Providence-Sans.otf') format('woff2'),
+       url('/assets/fonts/Providence-Sans.otf') format('woff'),
+       url('/assets/fonts/Providence-Sans.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,9 +14,9 @@ html {
 
 @font-face {
   font-family: 'SuperFrog-Yqy1q';
-  src: url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('woff2'),
-       url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('woff'),
-       url('../assets/fonts/SuperFrog-Yqy1q.ttf') format('truetype');
+  src: url('/assets/fonts/SuperFrog-Yqy1q.ttf') format('woff2'),
+       url('/assets/fonts/SuperFrog-Yqy1q.ttf') format('woff'),
+       url('/assets/fonts/SuperFrog-Yqy1q.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
