@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: eleventy-test
 
-media_folder: "public/assets/images"
-public_folder: "/assets/images"
+media_folder: "public/assets/posters"
+public_folder: "/assets/posters"
 
 collections:
   - name: "shows"
@@ -21,3 +21,20 @@ collections:
         widget: "list"
         default:
           - "show"
+    
+  - name: "posters"
+    label: "Posters"
+    folder: "src/posters"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Poster Image", name: "posterImage", widget: "image"}
+      - {label: "Alt Text", name: "altText", widget: "string"}
+      - {label: "Date Of Show", name: "date", widget: "datetime"}
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default:
+          - "poster"

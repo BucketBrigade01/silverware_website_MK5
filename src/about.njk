@@ -71,14 +71,10 @@ layout: 'base.njk'
 <div class="poster-main">
     <div class="wrapper">
         <div class="poster-items">
-            <img src="/assets/posters/poster1.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster2.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster3.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster4.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster5.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster6.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster7.webp" width="300rem" alt="" loading="lazy">
-            <img src="/assets/posters/poster8.webp" width="300rem" alt="" loading="lazy"> 
+            {% for poster in collections.poster %}
+                <img src="{{ poster.data.posterImage }}" width="300rem" 
+                alt="{{ poster.data.altText }}" loading="lazy">
+            {% endfor %}
         </div>
     </div>
 </div>
