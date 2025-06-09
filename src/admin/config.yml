@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: eleventy-test
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "shows"
+    label: "Shows"
+    folder: "src/shows"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Address", name: "address", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Ticket Link", name: "ticketLinks", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", default:['show']}
