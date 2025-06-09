@@ -49,6 +49,7 @@
         font-weight: 800;
         letter-spacing: 0.5rem;
         max-width: 80ch;
+        z-index: 2;
     }
 
     @media screen and (width < 500px) {
