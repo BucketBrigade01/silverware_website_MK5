@@ -1,0 +1,34 @@
+.member-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.member-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-red);
+    border-radius: 1rem;
+
+    padding: 1rem 1rem;
+
+    filter: grayscale(60%) opacity(90%);
+    width: min(1000px, 90%);
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: 
+        transform ease-in-out 0.3s,
+        box-shadow ease-in-out 0.3s;
+}
+
+.member-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.member-item > * {
+    color: var(--color-white);
+}

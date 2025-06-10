@@ -21,10 +21,14 @@ footer {
 }
 
 .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     & i {
         color: var(--color-white);
         font-size: var(--font-400);
-        letter-spacing: 1rem;
         color: var(--color-light-brown);
         transition: transform 0.3s ease, color 0.3s ease;
     }
