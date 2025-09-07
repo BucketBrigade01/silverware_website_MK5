@@ -1,0 +1,127 @@
+dialog {
+    margin: auto;
+    width: min(1500px, 90%);
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    border: none;
+    padding: 2rem;
+
+    & h2 {
+        font-family: var(--font-brand);
+    }
+
+    & h4 {
+        font-weight: 900;
+    }
+    & p {
+        width: 60ch;
+    }
+
+    opacity: 0;
+    translate: 0 25vh;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition-property: display overlay box-shadow opacity translate;
+    transition-duration: 1s;
+    transition-behavior: allow-discrete;
+}
+
+dialog[open] {
+    margin: auto;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+
+
+    & h2 {
+        font-family: var(--font-brand);
+    }
+
+    & h4 {
+        font-weight: 900;
+    }
+
+    & p {
+        width: min(60ch, 90%);
+    }
+
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style {
+        opacity: 0;
+        translate: 0 -25vh;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+dialog::backdrop {
+    display: none;
+    opacity: 0;
+    transition-property: display overlay opacity;
+    transition-duration: 1s;
+    transition-behavior: allow-discrete;
+}
+
+dialog[open]::backdrop {
+    display: block;
+    opacity: 0.5;
+    background: linear-gradient(to bottom, #000, var(--color-brown));
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+.popup-snippet {
+    display: flex;
+    flex-direction: row;
+    object-fit: contain;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    & img {
+        width: 20rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+        z-index: 100;
+        position: relative;
+    }
+}
+
+.pedal-board {
+    width: min(40rem, 95%);
+    background-image: url("/assets/images/pedal_board.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+
+.pedals {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 4rem);  
+    grid-template-rows: repeat(2, 1fr);    
+    grid-template-areas: 
+        "pedal1 pedal2 pedal3 pedal4 pedal5"
+        "pedal6 . . . .";   
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & .pedal {
+        width: 4rem;
+    }
+}
+
+.pedal-1 {grid-area: pedal1;}
+.pedal-2 {grid-area: pedal2;}
+.pedal-3 {grid-area: pedal3;}
+.pedal-4 {grid-area: pedal4;}
+.pedal-5 {grid-area: pedal5;}
+.pedal-6 {grid-area: pedal6;}

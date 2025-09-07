@@ -1,9 +1,9 @@
 ---
-title: Herman's Upstairs 
-description: final goodbye show for Herman's upstairs 
+title: Silverware Valentines Show
+description: Put on by us for a huge valentines show bash
 posterImage: /assets/posters/poster3.webp
-altText: Silverware Herman's upstairs final goodbye show poster
+altText: Silverware Valentines show poster
 date: 2025-03-21
-tags: 
-    - poster
+tags:
+  - poster
 ---

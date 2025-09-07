@@ -1,9 +1,9 @@
 ---
-title: Herman's Upstairs 
-description: final goodbye show for Herman's upstairs 
+title: Sharon Show at Little Fern
+description: This was put on by Sharon the band
 posterImage: /assets/posters/poster7.webp
-altText: Silverware Herman's upstairs final goodbye show poster
+altText: Sharon Show Poster
 date: 2025-03-21
-tags: 
-    - poster
+tags:
+  - poster
 ---

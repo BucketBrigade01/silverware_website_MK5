@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/shows");
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addPassthroughCopy("./src/posters");
+    eleventyConfig.addPassthroughCopy("./src/members");
 
     eleventyConfig.addFilter('showDate', (dateObj) =>{
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toLocaleString(DateTime.DATE_HUGE);

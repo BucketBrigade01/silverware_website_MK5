@@ -1,9 +1,9 @@
 ---
-title: Herman's Upstairs 
-description: final goodbye show for Herman's upstairs 
+title: Stank Show
+description: First show put on by stank, we over sold capacity by 100 people loool
 posterImage: /assets/posters/poster8.webp
-altText: Silverware Herman's upstairs final goodbye show poster
+altText: Stank Show Poster
 date: 2025-03-21
-tags: 
-    - poster
+tags:
+  - poster
 ---

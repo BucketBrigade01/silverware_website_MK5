@@ -7,6 +7,9 @@
 }
 
 .member-item {
+    all: unset;
+    cursor: pointer;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,6 +17,13 @@
     border-radius: 1rem;
 
     padding: 1rem 1rem;
+
+    color: var(--color-white);
+
+    & h2 {
+        color: var(--color-white);
+        font-family: var(--font-brand);
+    }
 
     filter: grayscale(60%) opacity(90%);
     width: min(1000px, 90%);
@@ -27,8 +37,4 @@
 .member-item:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.member-item > * {
-    color: var(--color-white);
 }

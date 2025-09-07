@@ -1,5 +1,5 @@
 ---
-title: Silverware Band | Official Website
+title: Silverware Band | Official Website ~ About
 layout: 'base.njk'
 ---
 <!-- NAVBAR -->
@@ -50,21 +50,44 @@ layout: 'base.njk'
     </div>
 </div>
 <!--
-<div class="member-main">
+<div id="members" class="member-main">
     <div class="wrapper">
         <div class="member-items">
-            <div class="member-item" style="background-image: url('/assets/images/fish_eye.webp');">
-                <h2>Jake</h2>
-                <p>Guitar</p>
-            </div>
-            <div class="member-item" style="background-image: url('/assets/images/red_huck.webp');">
-                <h2>Huck</h2>
-                <p>Guitar</p>
-            </div>
-            <div class="member-item" style="background-image: url('/assets/images/cole.webp');">
-                <h2>Cole</h2>
-                <p>Bass</p>
-            </div>
+            {% for members in collections.members %}
+                <button class="member-item" style="background-image: url('{{ members.data.profileImage }}');">
+                    <h2>{{ members.data.name }}</h2>
+                    <p>{{ members.data.instrument }}</p>
+                </button>
+                <dialog>
+                    <div class="circle"></div>
+                    <div class="popup">
+                        <div class="popup-snippet">
+                            <div class="popup-snippet-info">
+                                <h2>{{ members.data.name }}</h1>
+                                <h4>{{ members.data.instrument }}</h4>
+                                <p>{{ members.data.bio }}</p>
+                            </div>
+                            <div>
+                                <img src="{{ members.data.profileImage }}" alt="">
+                            </div>
+                        </div>
+                        <div class="popup-equipment">
+                            <div class="pedal-board">
+                                <div class="pedals">
+                                    <img class="pedal pedal-1" src="/assets/images/dm-2.png" alt="">
+                                    <img class="pedal pedal-2" src="/assets/images/dm-2.png" alt="">
+                                    <img class="pedal pedal-3" src="/assets/images/dm-2.png" alt="">
+                                    <img class="pedal pedal-4" src="/assets/images/dm-2.png" alt="">
+                                    <img class="pedal pedal-5" src="/assets/images/dm-2.png" alt="">
+                                    <img class="pedal pedal-6" src="/assets/images/dm-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="close">close</button>
+                    </div>
+                </dialog>
+            {% endfor %}
+            
         </div>
     </div>
 </div>
@@ -99,9 +122,8 @@ layout: 'base.njk'
 </div>
 
 
-    <!-- GRADIENT -->
+<!-- GRADIENT -->
 
-    <div style="height: 200px;
-            background: linear-gradient(to bottom, var(--color-white), var(--color-brown));">
-
-    </div>
+<div style="height: 200px;
+        background: linear-gradient(to bottom, var(--color-white), var(--color-brown));">
+</div>
