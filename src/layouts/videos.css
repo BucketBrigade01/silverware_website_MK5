@@ -1,0 +1,25 @@
+.video-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    & h1 {
+        font-family: var(--font-brand);
+    }
+}
+
+.video {
+    border-radius: 1rem;
+    overflow: hidden; 
+    aspect-ratio: 16 / 9;
+    @media (max-width: 768px) {
+        max-width: 100%; 
+    }
+
+    & iframe {
+        display: block; 
+        border-radius: 1rem; 
+    }
+}

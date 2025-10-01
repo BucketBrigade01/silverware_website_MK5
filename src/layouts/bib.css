@@ -7,9 +7,95 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 
     & h2 {
         font-family: var(--font-brand);
     }
 }
+
+.bib-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+    overflow: visible;
+    
+    & p {
+        width: 50ch;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        & p {
+             width: 100%;
+        }
+    }
+}
+
+.bib-item-images {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow: visible;
+}
+
+.bib-item-image-left {
+     background-color: rgb(243, 240, 227);
+    aspect-ratio: 1/1;
+    padding: 1rem 1rem 3rem 1rem;
+    transform: rotate(-5deg);
+    position: relative; 
+    z-index: 1; 
+    border-radius: 1rem;
+     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    & img {
+        aspect-ratio: 1/1;
+        width: 15rem;
+        object-fit: cover;
+        display: block; 
+    }
+}
+
+.bib-item-image-right {
+    background-color: rgb(243, 240, 227);
+    aspect-ratio: 1/1;
+    padding: 1rem 1rem 3rem 1rem;
+    transform: rotate(5deg);
+    position: relative; 
+    z-index: 1; 
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    & img {
+        aspect-ratio: 1/1;
+        width: 15rem;
+        object-fit: cover;
+        display: block; 
+    }
+}
+
+.bib-date {
+    position: relative;
+    padding: 0 3rem;
+}
+
+.bib-date::before,
+.bib-date::after {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    width: 2rem; 
+    height: 2px; 
+    background-color: black;
+}
+
+.bib-date::before {
+    left: 0; 
+}
+
+.bib-date::after {
+    right: 0; 
+}
+
