@@ -32,7 +32,7 @@ layout: 'base.njk'
     <div class="wrapper">
         <div class="hero-items">
             <img class="hero-logo" src="assets/art/silverware_banner_logo.png" alt="">
-            <p>CHECKOUT OUT NEWEST ALBUM DAYDREAM</p>
+            <p>CHECKOUT OUR NEWEST ALBUM DAYDREAM</p>
             <div class="album-showcase">
                 <div class="album-showcase-item">
                     <a href="https://open.spotify.com/album/0Ih72vB03xuyyVuhrShVVN?si=K-eJX5NTQeS02NbNF2qzPQ" target="_blank"><img class="old-album" src="assets/art/lavender.webp" alt=""></a>
@@ -66,13 +66,13 @@ layout: 'base.njk'
                         </div>
                         <p class="show-address">{{show.data.address}}</p>
                         {% if show.data.ticketLink %}
-                            <a  href="${show.ticketLink}" target="_blank" rel="noopener">
+                            <a  href="${show.data.ticketLink}" target="_blank" rel="noopener">
                                 <button class="ticket-button" >
                                     Get Tickets
                                 </button>
                             </a>
                         {% else %}
-                            <a  href="${show.ticketLink}" target="_blank" rel="noopener">
+                            <a  href="${show.data.ticketLink}" target="_blank" rel="noopener">
                                 <button class="no-ticket-button" >
                                     Tix Not Available
                                 </button>
