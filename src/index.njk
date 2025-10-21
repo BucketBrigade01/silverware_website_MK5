@@ -66,14 +66,14 @@ layout: 'base.njk'
                         </div>
                         <p class="show-address">{{show.data.address}}</p>
                         {% if show.data.ticketLink %}
-                            <a  href="${show.data.ticketLink}" target="_blank" rel="noopener">
-                                <button class="ticket-button" >
+                            <a href="{{show.data.ticketLink}}" target="_blank" rel="noopener">
+                                <button class="ticket-button">
                                     Get Tickets
                                 </button>
                             </a>
                         {% else %}
-                            <a  href="${show.data.ticketLink}" target="_blank" rel="noopener">
-                                <button class="no-ticket-button" >
+                            <a href="{{show.data.ticketLink}}" target="_blank" rel="noopener">
+                                <button class="no-ticket-button">
                                     Tix Not Available
                                 </button>
                             </a>
