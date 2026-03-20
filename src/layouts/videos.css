@@ -10,6 +10,12 @@
     }
 }
 
+.video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .video {
     border-radius: 1rem;
     overflow: hidden; 
